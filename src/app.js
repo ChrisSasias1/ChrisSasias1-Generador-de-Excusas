@@ -3,20 +3,15 @@ let action = ["ate", "peed", "crushed", "broke"];
 let what = ["my homework", "the keys", "the car"];
 let when = ["before the class", "right on time", "when I finished", "during my lunch", "while I was praying"];
 
-function Generadorexcusas(quien, action, que, cuando) {
-  let numQuien = Math.floor(Math.random() * quien.length);
-  let numAction = Math.floor(Math.random() * action.length);
-  let numQue = Math.floor(Math.random() * que.length);
-  let numCuando = Math.floor(Math.random() * cuando.length);
+function Generadorexcusas(list) {
+  let randomWord = list[Math.floor(Math.random() * list.length)];
 
-  let e = " ";
-
-  return (
-    quien[numQuien] + e + action[numAction] + e + que[numQue] + e + cuando[numCuando]
-  );
+  return (randomWord);
 }
 function onLoad() {
+  let frasecompleta = `${Generadorexcusas(who)} ${Generadorexcusas(action)} ${Generadorexcusas(what)} ${Generadorexcusas(when)}`
   let excusa = document.getElementById("excusa");
-  excusa.innerHTML = Generadorexcusas(who, action, what, when);
+  excusa.innerHTML = frasecompleta;
+  
 }
 window.onload = onLoad;
