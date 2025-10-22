@@ -9,9 +9,10 @@ function Generadorexcusas(list) {
   return (randomWord);
 }
 function onLoad() {
-  let frasecompleta = `${Generadorexcusas(who)} ${Generadorexcusas(action)} ${Generadorexcusas(what)} ${Generadorexcusas(when)}`
+  
+  let completeSentence = `${Generadorexcusas(who)} ${Generadorexcusas(action)} ${Generadorexcusas(what)} ${Generadorexcusas(when)}`
   let excusa = document.getElementById("excusa");
-  excusa.innerHTML = frasecompleta;
+  excusa.innerHTML = completeSentence;
   
 }
 window.onload = onLoad;
